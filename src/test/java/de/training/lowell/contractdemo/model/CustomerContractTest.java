@@ -43,6 +43,7 @@ import org.springframework.test.web.servlet.MockMvc;
     @Test
     public void testCreateContract() throws Exception
     {
+        customerContractRepository.deleteAll();
         contractRepository.deleteAll();
         Contract contract = new Contract();
         contract.setDuration(10);
